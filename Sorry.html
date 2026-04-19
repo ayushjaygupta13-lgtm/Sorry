@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Megha ❤️</title>
+
+<style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e6f0ff 0%, #b3e0ff 100%);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+    padding: 20px;
+}
+
+.apology-container {
+    background: #ffffff;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 90%;
+}
+
+#main-greeting {
+    color: #6a3d9a;
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+.message-box {
+    font-size: 1.4em;
+    line-height: 1.6;
+    color: #555;
+    border-left: 3px solid #ff99cc;
+    padding-left: 20px;
+    margin: 30px 0;
+    min-height: 100px;
+    overflow: hidden;
+    white-space: pre-wrap;
+}
+
+.closing p {
+    font-size: 1.1em;
+    margin: 15px 0;
+}
+
+.sender {
+    font-weight: 700;
+    color: #6a3d9a;
+    margin-top: 30px;
+}
+
+.cta-button {
+    background-color: #ff99cc;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 30px;
+
+    /* Hidden initially */
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.cta-button:hover {
+    background-color: #ff6699;
+    transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="apology-container">
+    <h1 id="main-greeting">I am sorry Megha.</h1>
+
+    <div id="apology-message" class="message-box"></div>
+
+    <div class="closing">
+        <p>I cherish our friendship more than words can say.</p>
+        <p class="sender">- Ayush</p>
+    </div>
+
+    <button id="talk-button" class="cta-button">
+        When you're ready, let's talk.
+    </button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    const apologyText = `Bro... Ik u are still angry and you might not even see this but u genuinely wanna apologize for what I said about you. I won't defend myself and you have all the right to be angry with me matter of fact u even have the right to slap the shit out of me, I broke your trust and I myself feel disgusted by it... But you are the last person I wanna hurt.... Although I have already done that.. I wanna apologize for what I did... You didn't deserve what I did and idk if you will even reply but i miss you a lot.... Life feels empty and full without you.... You are the person i trust the most alongside anju and the person i would give my all to be with.... What I have done is absolutely shitty... I am sorry so fucking sorry... I should have defended you everywhere and whenever those PPL talked shit about you... I should not have said that shit about you... I triggered you to the point you didnot wanna see my face.... I will be on my knees just to apologise to you but i can't loose such a dear friend of mine megha.... You are the definition of a true and a loving friendship for me.... I don't wanna loose you... Please megha I am sorry....`;
+
+    const messageElement = document.getElementById('apology-message');
+    const talkButton = document.getElementById('talk-button');
+
+    let charIndex = 0;
+
+    function typeWriter() {
+        if (charIndex < apologyText.length) {
+            messageElement.innerHTML = apologyText.substring(0, charIndex + 1);
+            charIndex++;
+            setTimeout(typeWriter, 30);
+        } else {
+            setTimeout(() => {
+                talkButton.style.opacity = '1';
+                talkButton.style.transform = 'scale(1)';
+            }, 800);
+        }
+    }
+
+    typeWriter();
+});
+</script>
+
+</body>
+</html>
